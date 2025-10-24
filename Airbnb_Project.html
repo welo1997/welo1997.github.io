@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Phantom by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index_wip.html">Home</a></li>
+								<li><a href="Airbnb_Project.html">Airbnb Project</a></li>
+								<li><a href="Superstore_Sales.html">Superstore Sales</a></li>
+								<li><a href="Stock_Analysis.html">Stock Analysis</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Data analysis project using real Airbnb data.</h1>
+							<p> Tools used: Excel, MySQL, Tableau</p>
+							<span class="image main"><img src="images/prague3.jpg" alt="" /></span>
+							<p>The purpose of this project is to help you decide what kind of Airbnb do you want to provide for your customers. Where should your Airbnb be located? How many people will it accomodate?
+								What should be the minimum length of stay? How much should you charge? These are all important questions one needs answered before starting his Airbnb business.
+							</p>
+							<h2>Downloading and Cleaning the data</h2>
+							<p>My source for this project was <a href="https://insideairbnb.com/get-the-data/">insideairbnb.com.</a> I used the latest data available, last scraped 16th of March 2025. I Downloaded
+							Detailed Listing Data for my data source, and a GeoJSON file to help later visualize our data. </p>
+							<p>Most of the data cleaning was done in Excel. I removed unnecessary columns, reformated some of the data to make opening the csv file in MySQL possible, removed empty cells/rows, removed
+								null values, and assigned new IDs to my data, as the original range of ID numbers was way out of range for MySQL to interpret. <a href="https://github.com/welo1997/AirbnbProject">Click here</a> to
+								see all of the files used for this project.
+							</p>
+							
+							<h2>Finding Trends using SQL</h2>
+							<p>Next I used MySQL to query through the data, to find trends we could later visualize. Thanks to the number_of_reviews column we could analyze, which Airbnb listings are most popular in relationship
+							to their location, size, minimum nights stay and price. I Also used SQL to find innacurate data, which would harm the visualization, and removed it. The SQL file is included in the repository.</p>
+							
+							<h2>Visualizing the data using Tableau</h2>
+
+							<p>I exported the final data table from MySQL and loaded it into Tableau Public along with the geoJSON file i downloaded earlier. I performed and Inner Join
+								on the two files to create a map in tableau for the visualization, along with other graphs to show as much useful data as possible.</p>
+							
+							<p>Key takeaways from the visualization are:</p>
+
+							<p>• The most popular neighbourhoods are Praha 1 and Praha 2.<br>
+							• Accomodations for 4-5 people are the priciest, but accomodations for 2-3 people are the most popular.<br>
+							• The longer is the minimum stay, the cheaper is the price per night.<br>
+							• The most popular neighbourhoods tend to be the most expensive.<br>
+							• Accomodation for 1 person yields the lowest income and also is in the lowest demand.<br></p>
+
+							<p>View in full screen for the optimal experience.</p>
+
+
+
+
+
+
+							<div style="margin-top: 20px;">
+								<div class='tableauPlaceholder' id='viz1747054216433' style='margin: 0 auto; text-align: center; width: 100%;'>
+								<noscript><a href='#'><img alt='Dashboard 1 ' src='https://public.tableau.com/static/images/ai/airbnb_17470400188730/Dashboard1/1_rss.png' style='border: none' /></a></noscript>
+								<object class='tableauViz' style='display:none;'>
+									<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+									<param name='embed_code_version' value='3' />
+									<param name='site_root' value='' /><param name='name' value='airbnb_17470400188730&#47;Dashboard1' />
+									<param name='tabs' value='no' /><param name='toolbar' value='yes' />
+									<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ai&#47;airbnb_17470400188730&#47;Dashboard1&#47;1.png' />
+									<param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+									<param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
+									<param name='display_count' value='yes' /><param name='language' value='en-US' />
+								</object>
+								</div>
+								<script type='text/javascript'>
+								var divElement = document.getElementById('viz1747054216433');
+								var vizElement = divElement.getElementsByTagName('object')[0];
+								vizElement.style.width='100%';
+								vizElement.style.height='900px';
+								var scriptElement = document.createElement('script');
+								scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+								vizElement.parentNode.insertBefore(scriptElement, vizElement);
+								</script>
+								</div>
+								<p><i>Disclaimer: This project uses public data from Inside Airbnb and is not affiliated with Airbnb, Inc.</i></p>
+							</div>
+						</div>
+					</div>
+				<!-- Footer -->
+					<footer id="footer">
+						<div style='margin: 0 auto; text-align: center; width: 100%'>
+							<section>
+								<h2 >Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://github.com/welo1997" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
